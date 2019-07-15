@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CData.XamDataGrid.GropingListApp", "CData.XamDataGrid.GropingListApp\CData.XamDataGrid.GropingListApp.csproj", "{AB8EDD2B-1AA5-4AE2-B7BE-8AD501A490B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB8EDD2B-1AA5-4AE2-B7BE-8AD501A490B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8EDD2B-1AA5-4AE2-B7BE-8AD501A490B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8EDD2B-1AA5-4AE2-B7BE-8AD501A490B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8EDD2B-1AA5-4AE2-B7BE-8AD501A490B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {404B26D8-82CC-4748-A5E7-BC58F27BAE24}
+	EndGlobalSection
+EndGlobal
