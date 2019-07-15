@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
+using System.Data.CData.D365Sales;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CData.XamDataGrid.GropingListApp
 {
@@ -23,6 +12,24 @@ namespace CData.XamDataGrid.GropingListApp
         public MainWindow()
         {
             InitializeComponent();
+
+            sqlTextBox.Text = "SELECT name, closeprobability, actualvalue, stepname FROM opportunities";
+        }
+
+        private void ExecuteButton_Click(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "InitiateOAuth=GETANDREFRESH;OrganizationUrl=https://sugimomoto24.crm7.dynamics.com/;";
+
+            using (var connection = new D365SalesConnection(connectionString))
+            {
+                var dataAdapter = new D365SalesDataAdapter(
+                sqlTextBox.Text, connection);
+
+                var table = new DataTable();
+                dataAdapter.Fill(table);
+
+                this.DataContext = table.Rows;
+            }
         }
     }
 }

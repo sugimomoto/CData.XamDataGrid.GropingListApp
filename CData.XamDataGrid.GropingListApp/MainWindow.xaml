@@ -1,12 +1,22 @@
-﻿<Window x:Class="CData.XamDataGrid.GropingListApp.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CData.XamDataGrid.GropingListApp"
+        xmlns:Custom="http://infragistics.com/DataPresenter" x:Class="CData.XamDataGrid.GropingListApp.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="sqlTextBox" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="668"/>
+        <Button x:Name="executeButton" Content="Execute" HorizontalAlignment="Left" Margin="683,10,0,0" VerticalAlignment="Top" Width="99" Height="45" Click="ExecuteButton_Click"/>
+
+        <!-- XamDataGrid を追加 -->
+        <Custom:XamDataGrid Name="xamDataGrid" DataSource="{Binding}" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="349" Width="772" Theme="Metro">
+            <Custom:XamDataGrid.FieldSettings>
+                <Custom:FieldSettings AllowSummaries="True" AllowRecordFiltering="true"/>
+            </Custom:XamDataGrid.FieldSettings>
+        </Custom:XamDataGrid>
+
     </Grid>
 </Window>
